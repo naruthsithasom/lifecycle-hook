@@ -1,10 +1,9 @@
 import React from 'react'
 import logoWeb from './logo.svg'
 import './App.css'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import { Counter } from './hookCounter/Counter'
 import { TodoList } from './todoHook/TodoList'
-import { Link } from 'react-router-dom'
 
 function AppRouteDom() {
   return (

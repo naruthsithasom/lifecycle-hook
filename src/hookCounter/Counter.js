@@ -10,9 +10,10 @@ export class Counter extends Component {
         color: '#00ff00',
         textAlign: "center"
       },
-      Item2: {
+      item2: {
         padding: 10,
-        textDecoration: 'none'
+        textDecoration: 'none',
+        color: '#ff0004'
       }
     }
 
@@ -25,7 +26,7 @@ export class Counter extends Component {
 
         <h1 style={Styles.Item1}>Hook Counter page</h1><br />
         <Link to='/' style={Styles.Item2}>Home</Link>
-        <Link to="/todo" style={Styles.Item2}>Todo</Link>
+        <Link to="/todo" style={Styles.item2}>Todo</Link>
       </div>
     )
   }
