@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Article from './Component/Article'
+class App extends React.Component {
+  constructor(props){
+    console.log("[App.js] Constructor")
+    super(props)
+    this.state = {
+      isShow: true
+    }
+   this.onChangeVisible = this.onChangeVisible.bind(this)
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  static getDerivedStateFromProps(props, state){
+    console.log("[App.js] Get Derived State From Props")
+    return state
+  }
+
+  onChangeVisible(){
+    this.setState(prevState => ({
+      isShow: !prevState.isShow 
+    }))
+  }
+
+  // วิธีนี้ให้ใช้ Allow function จะได้ไม่ต้อง bind ใน constructor
+  /*
+  onChangeVisible = () => {
+    this.setState(prevState => ({
+      isShow: !prevState.isShow 
+    }))
+  }
+  */
+  componentDidMount(){
+    console.log("[App.js] Component Did Mount")
+  }
+  render(){
+    console.log("[App.js] Render")
+    return (
+      <div className="Cus-text-center">
+        <button onClick={this.onChangeVisible}>ON/OFF</button>
+    {this.state.isShow ? <Article article="asdfasdfasdfadsfasdfadsfadfadfadfadfadfadfasdf สกดสหกดกหด" />:null}
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
