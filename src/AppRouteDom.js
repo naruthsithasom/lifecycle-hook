@@ -4,6 +4,7 @@ import './App.css'
 import { Switch, Route, Link } from 'react-router-dom'
 import { Counter } from './hookCounter/Counter'
 import { TodoList } from './todoHook/TodoList'
+import { UseStateCounter} from './hookCounter/UseStateCounter'
 
 function AppRouteDom() {
   return (
@@ -11,6 +12,7 @@ function AppRouteDom() {
       <Route exact path="/">
         <Link to="/todo">Todo </Link>
         <Link to="/hook">Hook </Link>
+        <Link to='/usestatecounter'>useStateCounter</Link>
         <div className="App">
           <header className="App-header">
             <img src={logoWeb} className="App-logo" alt="logo" />
@@ -23,6 +25,9 @@ function AppRouteDom() {
       </Route>
       <Route path="/todo">
         <TodoList />
+      </Route>
+      <Route path='/usestatecounter'>
+        <UseStateCounter/>
       </Route>
     </Switch>
   )
