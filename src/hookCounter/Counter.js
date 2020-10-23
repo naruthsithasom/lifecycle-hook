@@ -1,26 +1,31 @@
-import React, {Component,StyleSheet} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component, StyleSheet } from 'react'
+import { Link } from 'react-router-dom'
 
-export class Counter extends Component{
-  render(){
+export class Counter extends Component {
+  render() {
 
-    const TextH1 = {
-    Item1:{
-        paddingTop: 40,
+    const Styles = {
+      Item1: {
+        paddingTop: 10,
         color: '#00ff00',
         textAlign: "center"
+      },
+      Item2: {
+        padding: 10,
+        textDecoration: 'none'
       }
     }
 
-    return(
+    return (
       <div style={{
         backgroundColor: "#ccc",
-        paddingBottom: 20
-        }}>
+        paddingBottom: 10,
+        margin: 0
+      }}>
 
-      <h1 style={ TextH1.Item1 }>Counter page</h1><br/>
-      <Link to='/'>Home || </Link>
-      <Link to="/todo">Todo </Link>
+        <h1 style={Styles.Item1}>Hook Counter page</h1><br />
+        <Link to='/' style={Styles.Item2}>Home</Link>
+        <Link to="/todo" style={Styles.Item2}>Todo</Link>
       </div>
     )
   }
