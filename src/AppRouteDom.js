@@ -16,7 +16,7 @@ function AppRouteDom(){
           <header className="App-header">
             <img src={logoWeb} className="App-logo" alt="logo"/>
           </header>
-          <main>Mian</main>
+          <main>Main</main>
         </div>
       </Route>
       <Route path="/hook">
