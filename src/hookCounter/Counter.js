@@ -1,7 +1,11 @@
-import React, { Component, useState} from 'react'
+import React, { Component} from 'react'
 import { Link } from 'react-router-dom'
-
+// การใข้ setState แบบ this.state ใช้ได้ใน Class 
+//ใช้แบบ Hook useState ดีกว่า
 export class Counter extends Component {
+  state = {
+    count: 0,
+  }
   render() {
 
     const Styles = {
@@ -16,9 +20,6 @@ export class Counter extends Component {
         color: '#ff0004'
       }
     }
-
-    let [count, counterUpdate] = useState(0)//ตั้งต้นเท่า count = 0
-
     return (
       <div style={{
         backgroundColor: "#ccc",
@@ -31,10 +32,10 @@ export class Counter extends Component {
         <Link to='/' style={Styles.Item2}>Home</Link>
         <Link to="/todo" style={Styles.item2}>Todo</Link>
         <div>
-          { count }
-          <button onclick={() => counterUpdate(count + 1)}>+</button>
-          <button onclick={() => counterUpdate(count - 1)}>-</button>
-          <button onClick={() => counterUpdate(0)}>reset</button>
+          <h3>{ this.state.count } </h3>
+          <button onclick={() => this.setState({ count: this.state.count + 1 })}>+</button>
+          <button onclick={() => this.setState({ count: this.state.count - 1 })}>-</button>
+          <button onClick={() => this.setState({ count: 0 })}>reset</button>
         </div>
       </div>
     )
