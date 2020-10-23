@@ -6,7 +6,7 @@ export class TodoList extends Component {
     return (
       <div>
         <h1>TodoList page</h1>
-        <Link to="/">home || </Link>
+        <Link to="/">home </Link>
         <Link to="/hook">Hook</Link>
       </div>
     )

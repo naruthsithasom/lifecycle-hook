@@ -4,8 +4,8 @@
 .Cus-text-center{
   text-align: center;
 }
-.Cus-button{
-  margin: 5px;
+.Cus-button, .Margin{
+  margin: 10px;
 }
 .App-logo {
   height: 20vmin;
