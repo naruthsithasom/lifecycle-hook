@@ -6,6 +6,7 @@ import { Counter } from './hookCounter/Counter'
 import { TodoList } from './todoHook/TodoList'
 import { UseStateCounter} from './hookCounter/UseStateCounter'
 import { TodoListUseState } from './todoHook/TodoListUseState'
+import { TodoAddEditDelete } from './todoHook/TodoAddEditDelete'
 function AppRouteDom() {
   return (
     <Switch>
@@ -14,6 +15,7 @@ function AppRouteDom() {
         <Link class="Margin" to="/hook">Hook</Link>
         <Link class="Margin" to='/usestatecounter'>Counter-useState</Link>
         <Link class="Margin" to='/todo-usestate'> Todo-useState</Link>
+        <Link class="Margin" to="/todo-add-edit-delete">To-Addd Eddit Delete</Link>
         <div className="App">
           <header className="App-header">
             <img src={logoWeb} className="App-logo" alt="logo" />
@@ -32,6 +34,9 @@ function AppRouteDom() {
       </Route>
       <Route path='/todo-usestate'>
         <TodoListUseState/>
+      </Route>
+      <Route path='/todo-add-edit-delete'>
+        <TodoAddEditDelete />
       </Route>
     </Switch>
   )
