@@ -8,7 +8,7 @@ import { UseStateCounter} from './hookCounter/UseStateCounter'
 import { TodoListUseState } from './todoHook/TodoListUseState'
 import { TodoAddEditDelete } from './todoHook/TodoAddEditDelete'
 import { FetchApi} from './Fetch/FetchApi'
-
+import { UseReducer} from './Reducer/UseReducer'
 
 function AppRouteDom() {
   return (
@@ -20,7 +20,7 @@ function AppRouteDom() {
         <Link class="Margin" to='/todo-usestate'> Todo-useState</Link>
         <Link class="Margin" to="/todo-add-edit-delete">To-Addd Eddit Delete</Link>
         <Link class="Margin" to="/api">Fetch-API</Link>
-
+        <Link class="Margin" to="/reducer">Use-Reducer</Link>
         <div className="App">
           <header className="App-header">
             <img src={logoWeb} className="App-logo" alt="logo" />
@@ -45,6 +45,9 @@ function AppRouteDom() {
       </Route>
       <Route path="/api">
         <FetchApi />
+      </Route>
+      <Route path='/reduce'>
+        <UseReducer />
       </Route>
     </Switch>
   )
