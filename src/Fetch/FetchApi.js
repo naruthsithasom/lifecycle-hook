@@ -11,12 +11,13 @@ export const FetchApi = () => {
     .then( res => res.json())
     .then( data => {
       apiUpdate(data)
+      console.log(data)
     })
   }, [])
   return (
     <div>
-      <table>
-        <tr style={{textAlign:'left'}}>
+      <table style={{border:'1px solid'}}>
+        <tr style={{textAlign:'left',backgroundColor:'#00ccee'}}>
           {/* <th>Confirmed</th>
           <th>Hospitalized</th>
           <th>Deaths</th>
@@ -34,7 +35,7 @@ export const FetchApi = () => {
         </tr>
         {Api.map((obj => {
           return (<tr>
-            <td>{obj.userId}</td>
+            <td style={{}}>{obj.userId}</td>
             <td>{obj.id}</td>
             <td>{obj.title}</td>
             <td>{obj.completed}</td>
